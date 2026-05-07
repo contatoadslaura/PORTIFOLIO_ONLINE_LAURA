@@ -1,0 +1,363 @@
+/* =============================================
+   PORTFÓLIO PESSOAL — style.css
+   CSS3 puro, sem frameworks
+============================================= */
+
+/* Variáveis de cor e fonte */
+:root {
+    --azul:    #1a1a2e;
+    --acento:  #e94560;
+    --texto:   #333;
+    --claro:   #666;
+    --fundo:   #fafafa;
+    --alt:     #f0f0f0;
+    --borda:   #ddd;
+    --branco:  #fff;
+    --fonte:   'Inter', Arial, sans-serif;
+}
+
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;   /* rolagem suave ao clicar nas âncoras */
+    scroll-padding-top: 60px;  /* compensa a altura do menu fixo */
+}
+
+body {
+    font-family: var(--fonte);
+    color: var(--texto);
+    background: var(--fundo);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* ---- NAVEGAÇÃO ---- */
+#nav {
+    position: fixed;
+    top: 0; left: 0; width: 100%;
+    background: var(--azul);
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+
+.nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 16px 0;
+}
+
+/* Lista de links do menu */
+#menu {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+}
+
+#menu a {
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    padding: 16px 14px;
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: color .2s;
+}
+
+#menu a:hover { color: #fff; }
+
+/* Botão hambúrguer (oculto no desktop) */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* ---- HERO ---- */
+.hero {
+    background: linear-gradient(135deg, #1a1a2e, #0f3460);
+    color: #fff;
+    text-align: center;
+    padding: 110px 20px 60px;
+}
+
+/* Foto de perfil circular */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid rgba(255,255,255,.4);
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero h1 { font-size: 2rem; margin-bottom: 10px; }
+
+.hero p {
+    opacity: .85;
+    max-width: 520px;
+    margin: 0 auto 25px;
+}
+
+/* Botão CTA */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    background: var(--acento);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: opacity .2s;
+}
+
+.btn:hover { opacity: .85; }
+
+/* ---- SEÇÕES GERAIS ---- */
+section {
+    padding: 60px 20px;
+}
+
+.fundo-alt { background: var(--alt); }
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 1.6rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 3px solid var(--acento);
+    display: inline-block;
+}
+
+section h3 {
+    font-size: 1rem;
+    color: var(--azul);
+    margin: 20px 0 8px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+section p { margin-bottom: 12px; color: var(--texto); }
+
+/* Lista genérica */
+.lista {
+    list-style: none;
+    padding: 0;
+}
+
+.lista li {
+    padding: 5px 0 5px 18px;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--claro);
+}
+
+/* Marcador personalizado */
+.lista li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--acento);
+}
+
+/* ---- TABELA DE FORMAÇÃO / EXPERIÊNCIA ---- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+tr { border-bottom: 1px solid var(--borda); }
+tr:last-child { border-bottom: none; }
+
+td {
+    padding: 12px 8px;
+    vertical-align: top;
+    font-size: 0.9rem;
+}
+
+/* Coluna de período */
+.periodo {
+    width: 90px;
+    color: var(--acento);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+td em { color: var(--claro); font-size: 0.85rem; }
+
+/* ---- PORTFÓLIO ---- */
+.port-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.port-card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: box-shadow .2s;
+}
+
+.port-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+
+.port-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+.port-card strong { display: block; color: var(--azul); margin-bottom: 4px; }
+
+.port-card p { font-size: 0.85rem; color: var(--claro); margin: 0; }
+
+/* ---- CONTATO ---- */
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.contato-grid > div p {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+/* Formulário */
+.campo { margin-bottom: 16px; }
+
+.campo label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--azul);
+    margin-bottom: 5px;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    font-family: var(--fonte);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.campo input:focus,
+.campo textarea:focus { border-color: var(--azul); }
+
+/* Campo com erro de validação */
+.campo input.erro,
+.campo textarea.erro { border-color: var(--acento); }
+
+.campo textarea { height: 110px; resize: vertical; }
+
+/* Mensagem de erro (oculta por padrão) */
+.erro {
+    color: var(--acento);
+    font-size: 0.78rem;
+    margin-top: 4px;
+    display: none;
+}
+
+.erro.vis { display: block; }
+
+/* Botão de envio */
+form button {
+    padding: 12px 28px;
+    background: var(--azul);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--fonte);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+form button:hover { opacity: .85; }
+
+/* Mensagem de sucesso (oculta por padrão) */
+.sucesso {
+    display: none;
+    color: #2a9d5c;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.sucesso.vis { display: block; }
+
+/* ---- RODAPÉ ---- */
+footer {
+    background: var(--azul);
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.82rem;
+}
+
+/* ---- RESPONSIVO ---- */
+@media (max-width: 700px) {
+
+    /* Menu mobile: drawer lateral */
+    #menu {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0; right: 0;
+        width: 220px;
+        height: 100vh;
+        background: var(--azul);
+        padding: 70px 20px 20px;
+        box-shadow: -4px 0 16px rgba(0,0,0,.3);
+    }
+
+    /* Classe adicionada pelo JavaScript ao abrir */
+    #menu.aberto { display: flex; }
+
+    #menu a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,.1); }
+
+    .hamburger { display: block; }
+
+    .hero { padding: 100px 20px 50px; }
+    .hero h1 { font-size: 1.5rem; }
+
+    .contato-grid { grid-template-columns: 1fr; gap: 20px; }
+
+    .periodo { width: 70px; font-size: 0.8rem; }
+}
