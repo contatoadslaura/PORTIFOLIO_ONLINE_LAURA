@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- MENU DE NAVEGAÇÃO FIXO com links de âncora --> 
+
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#inicio" class="logo">Portfólio de Laura </a>
+            <ul id="menu">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <!-- Botão para DISPOSITIVO MÓVEL -->
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+
+    <!-- APRESENTAÇÃO INICIAL DA PAGINA  -->
+    <header class="hero" id="inicio">
+        <img src="imagens/Ft_Laura.jpg" alt="Foto de perfil" class="avatar">
+        <h1>Secretária Executiva</h1>
+        <p>12 anos de experiência na profissão e estudante de ADS.</p>
+        <a href="#contato" class="btn">Entre em Contato</a>
+    </header>
+
+    <!-- SOBRE MIM -->
+    <section id="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+<!-- PARAGRAFO -->
+            <p>Secretária Executiva com mais de 12 anos de experiência no Ministério da Justiça e Segurança Pública,
+            atuando na Assessoria Especial de Controle Interno, Subcretaria de Tecnologia da Informação, 
+            Defesa do Consumidor e Coordenação de Gestão Documental.
+            Postura ética e profissional, com visão estratégica no apoio a gestores e equipes internas.</p>
+
+            <h3>Habilidades Técnicas</h3>    <!-- MINHAS HABILIDADES -->
+            <ul class="lista">
+                <li>Gestão de agendas executivas, eventos e processos administrativos</li>          <!-- LISTA NÃO ORDENADA -->
+                <li>Comunicação empresarial e Redação Oficial</li>
+                <li>Controle e Gestão Documental e mediação de demandas</li>
+            </ul>
+
+            <h3>Certificações</h3>              <!-- MINHAS CERTIFICACOES -->
+            <ul class="lista">
+                <li><strong>Otimização de trabalho com Office 365</strong> — Escola Virtual do Governo (EV.G)</li>      <!-- LISTA NÃO ORDENADA -->
+                <li><strong>SEI! USAR 4.0</strong> — Escola Virtual do Governo (EV.G)</li>
+                <li><strong>VI Jornada Internacional de Secretariado</strong> — Participação</li>
+                <li><strong>Inglês Iniciante</strong> — Park Education (2021)</li>
+            </ul>
+        </div>
+    </section>
+
+         <!-- FORMAÇÃO ACADEMICA-->
+    <section id="formacao" class="fundo-alt">
+        <div class="container">
+            <h2>Formação</h2>
+
+            <h3>Acadêmica</h3>
+            <table>
+                <tr><td class="periodo">2026</td><td><strong>Tecnólogo - Análise e Desenvolvimento de Sistemas</strong><br>Centro Universitário Internacional - Uninter</td></tr>
+                <tr><td class="periodo">2014 a 2016</td><td><strong>Tecnólogo - Secretariado Executivo</strong><br>Centro Universitário Internacional - Uninter</td></tr>
+                <tr><td class="periodo">2014 a 2015</td><td><strong>Técnico em Secretariado</strong><br>Instituto Monte Horebe</td></tr>
+            </table>
+
+            <h3>Experiência Profissional</h3>
+            <table>
+                <tr>
+                    <td class="periodo">2014 atual</td>
+                    <td>
+                        <strong>Secretária Executiva</strong><br>
+                        <em>Ministério da Justiça e Segurança Pública</em>
+                        <ul class="lista">
+                            <li>Gestão de agendas e compromissos de alta administração</li>             <!-- LISTA NÃO ORDENADA -->
+                            <li>Elaboração e revisão de documentos oficiais</li>
+                            <li>Apoio em reuniões técnicas e eventos institucionais</li>
+                            <li>Mediação de demandas interinstitucionais</li>
+                            <li>Controle documental e movimentação patrimonial</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodo">2013 a 2014</td>
+                    <td>
+                        <strong>Assistente Administrativo</strong><br>
+                        <em>Hospital Alvorada Brasília / Eleve Construtora / PH Service</em>
+                        <ul class="lista">
+                            <li>Suporte em rotinas hospitalares de urgência e emergência</li>       <!-- LISTA NÃO ORDENADA -->
+                            <li>Autorização de procedimentos junto aos planos de saúde</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="periodo">2008 a 2012</td>
+                    <td>
+                        <strong>Atendente / Operadora de Telemarketing</strong><br>
+                        <em>Call Tecnologia</em>
+                        <ul class="lista">
+                            <li>Atendimento receptivo sobre seguros de vida — Caixa Seguradora</li>             <!-- LISTA NÃO ORDENADA COM APENAS 1 ITEM, RSRSRS -->
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- PARTE DO PORTFÓLIO EM CARDS -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfólio</h2>
+            <p>Seleção de projetos e trabalhos realizados ao longo da carreira.</p>
+
+            <div class="port-grid">
+                <div class="port-card">             <!-- CARD -->
+                    <span class="port-icon">📋</span>       <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Gestão Documental</strong>
+                        <p>Organização e controle de documentos oficiais via SEI 4.0.</p>
+                    </div>
+                </div>
+                <div class="port-card">                 <!-- CARD -->
+                    <span class="port-icon">🗓️</span>            <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Organização de Eventos</strong>
+                        <p>Coordenação da VI Jornada Internacional de Secretariado.</p>
+                    </div>
+                </div>
+                <div class="port-card">                     <!-- CARD -->
+                    <span class="port-icon">💻</span>            <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Otimização Office 365</strong>
+                        <p>Implantação de fluxos de trabalho com ferramentas Microsoft.</p>
+                    </div>
+                </div>
+                <div class="port-card">                     <!-- CARD -->
+                    <span class="port-icon">📊</span>                <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Controle Patrimonial</strong>
+                        <p>Planilhas e processos para movimentação patrimonial.</p>
+                    </div>
+                </div>
+                <div class="port-card">                         <!-- CARD -->
+                    <span class="port-icon">📝</span>                   <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Redação Oficial</strong>
+                        <p>Elaboração de documentos seguindo padrões governamentais.</p>
+                    </div>
+                </div>
+                <div class="port-card">                     <!-- CARD -->
+                    <span class="port-icon">🤝</span>               <!-- ICONE PARA DEIXAR A PAGINA MAIS ALEGRE -->
+                    <div>
+                        <strong>Mediação Interinstitucional</strong>
+                        <p>Coordenação de demandas entre órgãos governamentais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+                         <!-- PARTE DE ENTRAR EM CONTATO -->
+    <section id="contato" class="fundo-alt">
+        <div class="container">
+            <h2>Contato</h2>
+
+            <div class="contato-grid">
+                <!-- DADOS DE CONTATO -->
+                <div>
+                    <p> contatoads.xxxxx@gmail.com</p>
+                    <p> (61) 9XXXX-0308</p>
+                    <p> Brasília - DF</p>
+                </div>
+
+                <!-- FORMULARIO PARA VALIDAÇÃO JavaScript -->
+                <form id="form" onsubmit="return enviar(event)">
+                    <div class="campo">
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" placeholder="Escreva seu nome aqui">
+                        <span class="erro" id="erroNome">Tente novamente, informe seu nome  (mínimo 5 caracteres).</span>           <!-- MENSAGEM DE ERRO -->
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="text" id="email" placeholder="Escreva seu e-mail aqui">
+                        <span class="erro" id="erroEmail">Informe um e-mail válido.</span>      <!-- MENSAGEM DE ERRO -->
+                    </div>
+                    <div class="campo">
+                        <label for="msg">Mensagem *</label>
+                        <textarea id="msg" placeholder="Escreva-me uma mensagem..."></textarea>
+                        <span class="erro" id="erroMsg">Escreva uma mensagem (mínimo 10 caracteres).</span>     <!-- MENSAGEM DE ERRO -->
+                    </div>
+                    <button type="submit">Enviar mensagem agora</button>
+                    <p id="sucesso" class="sucesso">✓ Mensagem recebida! Aguarde meu retorno.</p>      <!-- MENSAGEM DE ERRO -->
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 Portfólio Pessoal Online de Laura Alves — HTML, CSS e JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
